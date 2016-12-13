@@ -43,7 +43,7 @@ import responseCollection from './responseCollection'
  */
 function storageDriver(request$, runStreamAdapter) {
   // Execute writing actions.
-  request$.addListener({
+  request$.subscribe({
     next: (request) => writeToStore(request),
     error: () => {},
     complete: () => {},
